@@ -27,12 +27,22 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+    default_indent = 4
 
-# Enable autocomplete layer
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "cycle"
+
+[options]
+    autocomplete_method = "coc"
+
 
 [[layers]]
 name = 'shell'
@@ -56,6 +66,7 @@ default_height = 30
   ]
   [layers.override_cmd]
     c = ["clangd"]
+    cpp = ["clangd"]
 
 [[layers]]
   name = "gtags"
@@ -77,4 +88,12 @@ default_height = 30
 
 [[custom_plugins]]
   repo = "vhdirk/vim-cmake"
+  merged = false
+
+[[custom_plugins]]
+  repo = "rhysd/vim-clang-format"
+  merged = false
+
+[[custom_plugins]]
+  repo = "vim-scripts/DoxygenToolkit.vim"
   merged = false
