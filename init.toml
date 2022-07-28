@@ -50,6 +50,10 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+name = "git"
+git_plugin = "fugitive"
+
+[[layers]]
   name = "lang#c"
   enable_clang_syntax_highlight = true
   [layer.clang_std]
@@ -59,11 +63,15 @@ default_height = 30
   name = "format"
 
 [[layers]]
+  name = "cscope"
+
+[[layers]]
   name = "lsp"
   filetypes = [
     "c",
     "cpp"
   ]
+  enabled_clients = ['pylsp']
   [layers.override_cmd]
     c = ["clangd"]
     cpp = ["clangd"]
@@ -97,3 +105,17 @@ default_height = 30
 [[custom_plugins]]
   repo = "vim-scripts/DoxygenToolkit.vim"
   merged = false
+
+[[custom_plugins]]
+  repo = "hari-rangarajan/CCTree"
+  merged = false
+
+[[custom_plugins]]
+  repo = "dyng/ctrlsf.vim"
+  merged = false
+
+
+#Python
+
+[[layers]]
+  name = "lang#python"
